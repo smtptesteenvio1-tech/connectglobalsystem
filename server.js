@@ -1,13 +1,19 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const resend = require('./resend'); // ajuste conforme seu arquivo de envio
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public')); // para servir HTML, CSS, imagens
+
 app.post('/', (req, res) => {
   const { email, senha } = req.body;
-
-  // Verifica se o campo de senha foi preenchido
   const senhaPreenchida = senha ? 'sim' : 'não';
 
-  // Log no console (Render)
-  console.log(`Simulação de phishing: ${email} tentou acessar a plataforma. Senha preenchida: ${senhaPreenchida}`);
+  console.log(`Simulação de phishing: ${email} tentou acessar. Senha preenchida: ${senhaPreenchida}`);
 
-  // Envio por email via Resend (sem conteúdo da senha)
   resend.emails.send({
     to: 'seguranca@globalsystem.com',
     subject: 'Alerta de simulação de phishing',
@@ -17,6 +23,9 @@ app.post('/', (req, res) => {
     `
   });
 
-  // Redireciona para a página de alerta
   res.redirect('/phishing.html');
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
