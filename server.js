@@ -1,12 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const resend = require('./resend'); // ajuste conforme seu arquivo de envio
+const { Resend } = require('resend');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Chave da API Resend diretamente no código
+const resend = new Resend('re_bjc3V1g6_JDBHpPnr1vUPjMASnzUa46MA');
+
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public')); // para servir HTML, CSS, imagens
+app.use(express.static('public')); // Certifique-se de que seus arquivos HTML estão na pasta 'public'
 
 app.post('/', (req, res) => {
   const { email, senha } = req.body;
