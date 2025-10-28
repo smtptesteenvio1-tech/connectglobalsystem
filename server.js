@@ -96,18 +96,18 @@ app.post('/', (req, res) => {
     <body>
       <div class="message-box">
         <div class="alert-icon">⚠️</div>
-        <h1>Você caiu em uma simulação de phishing</h1>
+        <h1>Você acaba de cair em uma simulação de phishing</h1>
         <p class="highlight">⚠️ Isso poderia ter sido um ataque real!</p>
         <p>Você clicou em um link suspeito e digitou seus dados sem conferir o remetente do e-mail ou o endereço da página.</p>
         <p>Esse tipo de descuido pode colocar em risco toda a segurança da empresa.</p>
-        <p>🔍 <strong>Dica rápida:</strong> Sempre verifique se o e-mail é confiável, se o link parece legítimo e se a página tem o padrão visual da Connect.</p>
+        <p>🔍 <strong>Dica rápida:</strong> Sempre verifique se o e-mail é confiável, se o link é legítimo e se a página mantém o padrão visual original .</p>
         <hr style="border-color: rgba(255,255,255,0.3); margin: 20px 0;">
-        <p>💡 Esta página faz parte de um treinamento de conscientização sobre segurança digital.</p>
+        <p>Esta página faz parte de um treinamento de conscientização sobre segurança digital.</p>
         <p>✅ Nenhuma informação foi armazenada. O objetivo é mostrar como ataques reais podem parecer confiáveis.</p>
-        <p class="highlight">⚠️ Fique atento. Segurança digital começa com você!</p>
+        <p class="highlight">⚠️ Fique atento! A segurança digital começa com você!</p>
         <div class="footer">
           <p>— Agradecemos sua atenção.</p>
-          <p><strong>🛡️ Time de Cyber Security da Global System</strong></p>
+          <p><strong>🛡️ Time de Cyber Security Global System</strong></p>
         </div>
       </div>
     </body>
