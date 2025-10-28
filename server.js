@@ -100,7 +100,7 @@ app.post('/', (req, res) => {
         <p class="highlight">⚠️ Isso poderia ter sido um ataque real!</p>
         <p>Você clicou em um link suspeito e digitou seus dados sem conferir o remetente do e-mail ou o endereço da página.</p>
         <p>Esse tipo de descuido pode colocar em risco toda a segurança da empresa.</p>
-        <p>🔍 <strong>Dica rápida:</strong> Sempre verifique se o e-mail é confiável, se o link é legítimo e se a página mantém o padrão visual original .</p>
+        <p>🔍 <strong>Dica rápida:</strong> Sempre verifique se o e-mail é confiável, se o link é legítimo e se a página mantém o padrão visual original.</p>
         <hr style="border-color: rgba(255,255,255,0.3); margin: 20px 0;">
         <p>Esta página faz parte de um treinamento de conscientização sobre segurança digital.</p>
         <p>✅ Nenhuma informação foi armazenada. O objetivo é mostrar como ataques reais podem parecer confiáveis.</p>
